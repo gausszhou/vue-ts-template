@@ -8,7 +8,7 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 
 这是一个基于 Vue 3 + TypeScript + Vite 搭建的项目模板，用于快速开发 Vue 3 项目。
 
-## 项目结构
+## 项目结构 
 
 ```
 ├── public
@@ -26,3 +26,9 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 ├── .gitignore
 ├── index.html
 ├── package.json
+├── pnpm-lock.yaml
+├── README.md
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+```
