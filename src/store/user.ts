@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
+    isLogin: false,
     userId: '',
     userName: '',
     userAvatar: ''
@@ -15,6 +16,9 @@ export const useUserStore = defineStore('user', {
     },
     setUserAvatar(userAvatar: string) {
       this.userAvatar = userAvatar
+    },
+    setIsLogin(isLogin: boolean) {
+      this.isLogin = isLogin
     }
   },
 })

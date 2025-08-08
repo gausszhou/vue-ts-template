@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { createRoutes } from "./routes";
-import { useBaseHook } from "./hooks";
+import { useBaseHook, useLoginHook } from "./hooks";
+
 
 export function createAppRouter() {
   const router = createRouter({
@@ -8,5 +9,6 @@ export function createAppRouter() {
     routes: createRoutes(),
   });
   useBaseHook(router);
+  useLoginHook(router);
   return router;
 }
