@@ -17,9 +17,4 @@ export const useUserStore = defineStore('user', {
       this.userAvatar = userAvatar
     }
   },
-  getters: {
-    getUserId: (state) => state.userId,
-    getUserName: (state) => state.userName,
-    getUserAvatar: (state) => state.userAvatar
-  }
 })
