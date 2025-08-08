@@ -1,8 +1,28 @@
 import type { Router } from "vue-router";
-import { useUserStore } from "@/store/user";
+import { useUserStore } from "@/stores/user";
+import { userService } from "@/api/services/user";
+
+let isFetchedUserInfo = false;
+async function fetchUserInfo() {
+  const userStore = useUserStore();
+  try {
+    const res = await userService.getUserInfo();
+    userStore.setUserId(res.data.userId);
+    userStore.setUserName(res.data.userName);
+    userStore.setUserAvatar(res.data.userAvatar);
+    userStore.setIsLogin(true);
+    return res.data;
+  } catch (error) {
+    return null;
+  }
+}
 
 export function useLoginHook(router: Router) {
-  router.beforeEach((to, from, next) => {
+  router.beforeEach(async (to, from, next) => {
+    if (!isFetchedUserInfo) {
+      await fetchUserInfo();
+      isFetchedUserInfo = true;
+    }
     const userStore = useUserStore();
     const isLogin = userStore.isLogin;
 
