@@ -9,20 +9,22 @@
 ```
 ├── public
 ├── src
-│   ├── assets
-│   ├── components
-│   ├── views
-│   ├── App.vue
-│   ├── main.ts
-│   ├── router.ts
-│   ├── store.ts
-│   ├── styles
-│   └── utils
+    ├── api
+    ├── assets
+    ├── components
+    ├── hooks
+    ├── layouts
+    ├── router
+    ├── store
+    ├── styles
+    ├── views
+    └── utils
+    ├── App.vue
+    ├── main.ts
 ├── .eslintrc.js
 ├── .gitignore
 ├── index.html
 ├── package.json
-├── pnpm-lock.yaml
 ├── README.md
 ├── tsconfig.json
 ├── tsconfig.node.json
