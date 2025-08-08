@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { createRoutes } from "./routes";
-import { useBaseHook, useLoginHook } from "./hooks";
+import { useLoginHook } from "./hooks";
 
 
 export function createAppRouter() {
@@ -8,7 +8,6 @@ export function createAppRouter() {
     history: createWebHistory(),
     routes: createRoutes(),
   });
-  useBaseHook(router);
   useLoginHook(router);
   return router;
 }
