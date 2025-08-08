@@ -1,5 +1,5 @@
 import axios, { type AxiosResponse, type AxiosInstance } from "axios";
-import { useLang } from "./hooks/useLang";
+import { useLang } from "./hooks/use-lang";
 
 type HttpMethod = "GET" | "POST" | "PUT" | "DELETE";
 

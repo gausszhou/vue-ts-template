@@ -21,7 +21,7 @@ class ItemService {
    * @returns
    */
   public async getItemById(id: string) {
-    return httpClient.get(`/items/${id}`);
+    return httpClient.get(`/item/${id}`);
   }
 
   /**
@@ -30,7 +30,7 @@ class ItemService {
    * @returns
    */
   public async createItem(data: any) {
-    return httpClient.post("/items", data);
+    return httpClient.post("/item", data);
   }
 
   /**
@@ -40,7 +40,7 @@ class ItemService {
    * @returns
    */
   public async updateItem(id: string, data: any) {
-    return httpClient.put(`/items/${id}`, data);
+    return httpClient.put(`/item/${id}`, data);
   }
 
   /**
@@ -49,7 +49,7 @@ class ItemService {
    * @returns
    */
   public async deleteItemById(id: string) {
-    return httpClient.delete(`/items/${id}`);
+    return httpClient.delete(`/item/${id}`);
   }
 }
 
