@@ -5,4 +5,9 @@
 </template>
 <script lang="ts" setup>
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.layout-fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+</style>

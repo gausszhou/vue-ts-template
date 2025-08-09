@@ -11,9 +11,13 @@ export interface LoginResponse {
   userAvatar: string;
 }
 
+let isLogin = false;
+
 class UserService {
   public async getUserInfo() {
-    // return httpClient.get<LoginResponse>("/user/info");
+    if (!isLogin) {
+      return Promise.reject("未登录");
+    }
     console.log("getUserInfo");
     return Promise.resolve({
       data: {
@@ -22,8 +26,17 @@ class UserService {
         userAvatar: "",
       },
     });
+    // return httpClient.get<LoginResponse>("/user/info");
   }
   public async login(params: LoginParams) {
+    isLogin = true;
+    return Promise.resolve({
+      data: {
+        userId: "1",
+        userName: "gausszhou",
+        userAvatar: "",
+      },
+    });
     return httpClient.post<LoginResponse>("/user/login", params);
   }
 }
