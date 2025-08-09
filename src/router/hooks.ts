@@ -18,7 +18,7 @@ async function fetchUserInfo() {
 }
 
 export function useLoginHook(router: Router) {
-  router.beforeEach(async (to, from, next) => {
+  router.beforeEach(async (to, _from, next) => {
     if (!isFetchedUserInfo) {
       await fetchUserInfo();
       isFetchedUserInfo = true;
