@@ -78,6 +78,7 @@ const login = async () => {
     display: flex;
     background-color: #f8f9f5;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 400px;
   }
   .login-container-content-left {
     img {
@@ -88,6 +89,7 @@ const login = async () => {
   .login-container-content-right {
     box-sizing: border-box;
     width: 400px;
+    height: 400px;
     padding: 40px;
     display: flex;
     flex-direction: column;
